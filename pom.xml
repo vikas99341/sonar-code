@@ -15,6 +15,25 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <settings>
+    <pluginGroups>
+        <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
+    </pluginGroups>
+    <profiles>
+        <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <!-- Optional URL to server. Default value is http://localhost:9000 -->
+                <sonar.host.url>
+                  http://13.233.143.57:9000/
+                </sonar.host.url>
+            </properties>
+        </profile>
+     </profiles>
+	</settings>
   <build>
     <finalName>sonar-code</finalName>
   </build>
